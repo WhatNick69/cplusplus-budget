@@ -8,6 +8,8 @@ using namespace std;
 bool checkForUnique(int* buds, int count, int id);
 double enterSum();
 bool whatToDo();
+void balanceForEachAccounts(int* budsID,double* budsCash, int countOfBuds);
+void balanceForAllAccounts(double* budsCash, int countOfBuds);
 
 // Ввод количества аккаунтов
 int enteringCountOfAccount() {
@@ -86,6 +88,8 @@ void userWork(int* budsID, double* budsCash, int countOfBuds)
 		double sum = enterSum();
 		detectOperation(budsID,budsCash,countOfBuds,id,sum);
 	}
+	balanceForEachAccounts(budsID,budsCash,countOfBuds);
+	balanceForAllAccounts(budsCash, countOfBuds);
 }
 
 // Выйти или продолжить

@@ -68,4 +68,22 @@ int findNumberByID(int* budsID, int countOfBuds, int id)
 	return idNumber;
 }
 
+void balanceForEachAccounts(int* budsID, 
+	double* budsCash, int countOfBuds)
+{
+	for (int i = 0; i < countOfBuds; i++) {
+		std::cout << "Account with ID" << *(budsID + i) << " have "
+			<< *(budsCash + i) << "$\n";
+	}
+}
+
+void balanceForAllAccounts(double* budsCash, int countOfBuds)
+{
+	double totalSum = 0;
+	for (int i = 0; i < countOfBuds; i++) {
+		totalSum += *(budsCash + i);
+	}
+	std::cout << "Total sum is: " << totalSum << "$\n";
+}
+
 
